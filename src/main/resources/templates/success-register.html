@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>microservice app</title>
+</head>
+<body>
+<h1>Sucess register page</h1>
+<h2 style="text-align: center" th:text="${session.username}"></h2>
+
+
+<table>
+    <tr>
+        <td><b>name</b></td>
+        <td th:text="${newUser.username}">username</td>
+    </tr>
+    <tr>
+        <td><b>id</b></td>
+        <td th:text="${newUser.id}">email</td>
+    </tr>
+</table>
+
+<p><a href="/home">home page</a></p>
+<p><a href="/userPage">user page</a></p>
+<p><a href="/adminPage">admin pageg</a></p>
+<p><a href="/logout">logout</a></p>
+</body>
+</html>

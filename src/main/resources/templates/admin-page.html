@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>microservice app</title>
+</head>
+<body>
+<h1>Admin page</h1>
+<h2 style="text-align: center" th:text="${session.username}"></h2>
+
+
+<div>
+    <form method="get" action="/guests">
+        <button type="submit" title="Guests">Guests</button>
+    </form>
+</div>
+<h1>--------------------------------------------------</h1>
+
+<p><a href="/userPage">user page</a></p>
+<p><a href="/home">home page</a></p>
+<p><a href="/logout">logout</a></p>
+
+
+</body>
+</html>

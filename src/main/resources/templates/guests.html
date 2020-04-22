@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>microservice app</title>
+</head>
+<body>
+
+<h1>Guests</h1>
+<h2 style="text-align: center" th:text="${session.username}"></h2>
+</div>
+<table>
+    <thead>
+    <th scope="col">#</th>
+    <th scope="col">Phone Number</th>
+    <th scope="col">First</th>
+    <th scope="col">Last</th>
+    <th scope="col">Email Address</th>
+    </thead>
+    <tbody>
+    <tr th:each="guest : ${guests}">
+        <th scope="row"><a th:href="@{'/guests/' + ${guest.id}}" th:text="${guest.id}"></a></th>
+        <td th:text="${guest.phoneNumber}"></td>
+        <td th:text="${guest.firstName}"></td>
+        <td th:text="${guest.lastName}"></td>
+        <td th:text="${guest.emailAddress}"></td>
+    </tr>
+    </tbody>
+</table>
+</div>
+<p><a href="/home">home page</a></p>
+<p><a href="/userPage">user page</a></p>
+<p><a href="/logout">logout</a></p>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>microservice app</title>
+</head>
+<body>
+<h1>Home page</h1>
+<h2 style="text-align: center" th:text="${session.username}"></h2>
+
+
+<form method="post" action="/registration">
+    <div>
+        <label th:text="username"></label>
+        <input type="text" id="username" name="username" placeholder="Username" autofocus="autofocus">
+    </div>
+    <div>
+        <label th:text="password"></label>
+        <input type="password" id="password" name="password" placeholder="Password" autofocus="autofocus">
+    </div>
+    <button type="submit">Sign up</button>
+</form>
+
+<h1>--------------------------------------------------</h1>
+
+<div>
+<form method="get" action="/login">
+    <button type="submit" title="Sign in">Login</button>
+</form>
+</div>
+<h1>--------------------------------------------------</h1>
+
+<p><a href="/userPage">user page</a></p>
+<p><a href="/adminPage">admin page</a></p>
+<p><a href="/logout">logout</a></p>
+
+
+</body>
+</html>
